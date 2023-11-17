@@ -3,7 +3,7 @@
 
 # ai-games
 
-With this repository, our aim is to make people enjoy coding AI agents (currently for different games). This started as a fun project to collect all the games and make AI agents to solve them but soon realized everyone might enjoy participating in the project.
+With this repository, our aim is to help fellow enthusiasts code their first AI agents. This started as a fun project to collect all the games and make AI bots to play them but soon realized others might also enjoy participating and learning something new through it.
 
 Each game contains *player.py* which is the AI agent that plays the game. Please feel free to build your own AI bot by modifying *player.py*.
 
