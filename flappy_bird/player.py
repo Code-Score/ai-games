@@ -2,7 +2,8 @@
 import time
 import signal
 import sys
-from neural_network import Nnetwork
+sys.path.append('..')
+from utils.neural_network import Nnetwork
 
 class Player:
 	
