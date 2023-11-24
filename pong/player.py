@@ -9,6 +9,19 @@ import heapq
 from copy import deepcopy
 import random
 
+BEST_WEIGHTS = [
+                [[ 0.7184788 , -0.39752857, -0.47985157,  0.83834627,  0.39523845],
+                [ 0.66627134,  0.78094477,  0.05071419, -0.54042169,  0.37841983],
+                [ 0.03780728,  0.21773755, -0.28842893,  0.72384008,  0.45993991],
+                [ 0.04301163,  0.93032421,  0.76279433, -0.88636449,  0.35971356],
+                [ 0.53252678,  0.29918343,  0.23683955, -0.13565638, -0.45507588],
+                [ 0.22397957,  0.13656037, -0.71989099,  0.117984  , -0.43427532],
+                [-0.52184697, -0.78862114, -0.98496777,  0.30178235,  0.39502922],
+                [ 0.09135914, -0.76757145, -0.09655984, -0.54047288,  0.68036377]],
+                [[-0.04297519, -0.10843757,  0.76044326,  0.01445383, -0.40428726,
+                    0.28349921, -0.44160214, -0.92575841]]
+            ]
+
 class Player:
         # Take the initial position, dimensions, speed and color of the object
     def __init__(self, id):
@@ -32,7 +45,7 @@ class Player:
         self.num_players = 1000
         self.players = [Nnetwork(no_of_in_nodes=5, 
                             no_of_out_nodes=1, 
-                            no_of_hidden_nodes=8) 
+                            no_of_hidden_nodes=8, best_weights = None) # set best_weights = BEST_WEIGHTS to run pre-trained player 
                     for i in range(self.num_players)
                   ]
         self.current_player = -1
